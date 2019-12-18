@@ -1,0 +1,677 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		203E86BD92B65DFFADFDC551 /* Pods_Art_Shop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F566CE7ACC6D706AFB6E65 /* Pods_Art_Shop.framework */; };
+		495845FC23A5635A00245772 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 495845FB23A5635A00245772 /* Main.storyboard */; };
+		4958460523A56DF200245772 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4958460423A56DF200245772 /* LoginVC.swift */; };
+		4958460723A56E0300245772 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4958460623A56E0300245772 /* RegisterVC.swift */; };
+		4958460923A81A8A00245772 /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4958460823A81A8A00245772 /* RoundedViews.swift */; };
+		49B78A2423AA417200FCD5ED /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B78A2323AA417200FCD5ED /* Extensions.swift */; };
+		49B78A2823AAB75D00FCD5ED /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B78A2623AAB75D00FCD5ED /* ForgotPasswordVC.swift */; };
+		49B78A2923AAB75D00FCD5ED /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49B78A2723AAB75D00FCD5ED /* ForgotPasswordVC.xib */; };
+		49E3D97823A54EC500953CF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49E3D97723A54EC500953CF1 /* GoogleService-Info.plist */; };
+		49E3D97A23A5502900953CF1 /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49E3D97923A5502900953CF1 /* GoogleService-Info-2.plist */; };
+		50773D5823A2593800B992BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50773D5723A2593800B992BF /* AppDelegate.swift */; };
+		50773D5A23A2593800B992BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50773D5923A2593800B992BF /* SceneDelegate.swift */; };
+		50773D5C23A2593800B992BF /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50773D5B23A2593800B992BF /* HomeVC.swift */; };
+		50773D5F23A2593800B992BF /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50773D5D23A2593800B992BF /* LoginStoryboard.storyboard */; };
+		50773D6123A2594000B992BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50773D6023A2594000B992BF /* Assets.xcassets */; };
+		50773D6423A2594000B992BF /* LounchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50773D6223A2594000B992BF /* LounchScreen.storyboard */; };
+		50773D7223A278D100B992BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50773D7123A278D100B992BF /* AppDelegate.swift */; };
+		50773D7423A278D100B992BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50773D7323A278D100B992BF /* SceneDelegate.swift */; };
+		50773D7623A278D100B992BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50773D7523A278D100B992BF /* ViewController.swift */; };
+		50773D7923A278D100B992BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50773D7723A278D100B992BF /* Main.storyboard */; };
+		50773D7B23A278D500B992BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50773D7A23A278D500B992BF /* Assets.xcassets */; };
+		50773D7E23A278D500B992BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50773D7C23A278D500B992BF /* LaunchScreen.storyboard */; };
+		50773D8323A278DF00B992BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50773D6023A2594000B992BF /* Assets.xcassets */; };
+		F742B0A0B67EE117E56DE4DC /* Pods_Art_Shop_Admin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A69FAA9231C83D556D18D925 /* Pods_Art_Shop_Admin.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3771E85DCBF9FF011BFC6196 /* Pods-Art Shop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Art Shop.release.xcconfig"; path = "Pods/Target Support Files/Pods-Art Shop/Pods-Art Shop.release.xcconfig"; sourceTree = "<group>"; };
+		46F566CE7ACC6D706AFB6E65 /* Pods_Art_Shop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Art_Shop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		495845FB23A5635A00245772 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4958460423A56DF200245772 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		4958460623A56E0300245772 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		4958460823A81A8A00245772 /* RoundedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViews.swift; sourceTree = "<group>"; };
+		49B78A2323AA417200FCD5ED /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		49B78A2623AAB75D00FCD5ED /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		49B78A2723AAB75D00FCD5ED /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
+		49E3D97723A54EC500953CF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		49E3D97923A5502900953CF1 /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
+		50773D5423A2593800B992BF /* Art Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Art Shop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50773D5723A2593800B992BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		50773D5923A2593800B992BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		50773D5B23A2593800B992BF /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		50773D5E23A2593800B992BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LoginStoryboard.storyboard; sourceTree = "<group>"; };
+		50773D6023A2594000B992BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		50773D6323A2594000B992BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LounchScreen.storyboard; sourceTree = "<group>"; };
+		50773D6523A2594000B992BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50773D6F23A278D100B992BF /* Art Shop Admin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Art Shop Admin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		50773D7123A278D100B992BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		50773D7323A278D100B992BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		50773D7523A278D100B992BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		50773D7823A278D100B992BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		50773D7A23A278D500B992BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		50773D7D23A278D500B992BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		50773D7F23A278D500B992BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52CC0325EE12BC772BA31F6C /* Pods-Art Shop Admin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Art Shop Admin.release.xcconfig"; path = "Pods/Target Support Files/Pods-Art Shop Admin/Pods-Art Shop Admin.release.xcconfig"; sourceTree = "<group>"; };
+		7E60BA7C79381F84466E8ADF /* Pods-Art Shop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Art Shop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Art Shop/Pods-Art Shop.debug.xcconfig"; sourceTree = "<group>"; };
+		9A5A57D4DF51DE37A1EFF669 /* Pods-Art Shop Admin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Art Shop Admin.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Art Shop Admin/Pods-Art Shop Admin.debug.xcconfig"; sourceTree = "<group>"; };
+		A69FAA9231C83D556D18D925 /* Pods_Art_Shop_Admin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Art_Shop_Admin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50773D5123A2593800B992BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				203E86BD92B65DFFADFDC551 /* Pods_Art_Shop.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50773D6C23A278D100B992BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F742B0A0B67EE117E56DE4DC /* Pods_Art_Shop_Admin.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07D2EEBAFB6719E848084F11 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				46F566CE7ACC6D706AFB6E65 /* Pods_Art_Shop.framework */,
+				A69FAA9231C83D556D18D925 /* Pods_Art_Shop_Admin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		495845FD23A56CF600245772 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		495845FE23A56D0200245772 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4958460823A81A8A00245772 /* RoundedViews.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		495845FF23A56D1900245772 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				50773D5B23A2593800B992BF /* HomeVC.swift */,
+				4958460423A56DF200245772 /* LoginVC.swift */,
+				4958460623A56E0300245772 /* RegisterVC.swift */,
+				50773D5723A2593800B992BF /* AppDelegate.swift */,
+				50773D5923A2593800B992BF /* SceneDelegate.swift */,
+				4958460023A56D5600245772 /* Stroryboards */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4958460023A56D5600245772 /* Stroryboards */ = {
+			isa = PBXGroup;
+			children = (
+				50773D5D23A2593800B992BF /* LoginStoryboard.storyboard */,
+				495845FB23A5635A00245772 /* Main.storyboard */,
+				50773D6223A2594000B992BF /* LounchScreen.storyboard */,
+			);
+			path = Stroryboards;
+			sourceTree = "<group>";
+		};
+		49B78A2523AAB71500FCD5ED /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				49B78A2623AAB75D00FCD5ED /* ForgotPasswordVC.swift */,
+				49B78A2723AAB75D00FCD5ED /* ForgotPasswordVC.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		50773D4B23A2593700B992BF = {
+			isa = PBXGroup;
+			children = (
+				50773D5623A2593800B992BF /* Art Shop */,
+				50773D7023A278D100B992BF /* Art Shop Admin */,
+				50773D5523A2593800B992BF /* Products */,
+				F6702A14B655F3E63703028B /* Pods */,
+				07D2EEBAFB6719E848084F11 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		50773D5523A2593800B992BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50773D5423A2593800B992BF /* Art Shop.app */,
+				50773D6F23A278D100B992BF /* Art Shop Admin.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50773D5623A2593800B992BF /* Art Shop */ = {
+			isa = PBXGroup;
+			children = (
+				49B78A2323AA417200FCD5ED /* Extensions.swift */,
+				49B78A2523AAB71500FCD5ED /* Xib */,
+				495845FD23A56CF600245772 /* Model */,
+				495845FE23A56D0200245772 /* View */,
+				495845FF23A56D1900245772 /* Controller */,
+				50773D6023A2594000B992BF /* Assets.xcassets */,
+				50773D6523A2594000B992BF /* Info.plist */,
+				49E3D97723A54EC500953CF1 /* GoogleService-Info.plist */,
+			);
+			path = "Art Shop";
+			sourceTree = "<group>";
+		};
+		50773D7023A278D100B992BF /* Art Shop Admin */ = {
+			isa = PBXGroup;
+			children = (
+				50773D7123A278D100B992BF /* AppDelegate.swift */,
+				50773D7323A278D100B992BF /* SceneDelegate.swift */,
+				50773D7523A278D100B992BF /* ViewController.swift */,
+				50773D7723A278D100B992BF /* Main.storyboard */,
+				50773D7A23A278D500B992BF /* Assets.xcassets */,
+				50773D7C23A278D500B992BF /* LaunchScreen.storyboard */,
+				49E3D97923A5502900953CF1 /* GoogleService-Info-2.plist */,
+				50773D7F23A278D500B992BF /* Info.plist */,
+			);
+			path = "Art Shop Admin";
+			sourceTree = "<group>";
+		};
+		F6702A14B655F3E63703028B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7E60BA7C79381F84466E8ADF /* Pods-Art Shop.debug.xcconfig */,
+				3771E85DCBF9FF011BFC6196 /* Pods-Art Shop.release.xcconfig */,
+				9A5A57D4DF51DE37A1EFF669 /* Pods-Art Shop Admin.debug.xcconfig */,
+				52CC0325EE12BC772BA31F6C /* Pods-Art Shop Admin.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50773D5323A2593800B992BF /* Art Shop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50773D6823A2594000B992BF /* Build configuration list for PBXNativeTarget "Art Shop" */;
+			buildPhases = (
+				9B3CD2F79CA383475E5E53E4 /* [CP] Check Pods Manifest.lock */,
+				50773D5023A2593800B992BF /* Sources */,
+				50773D5123A2593800B992BF /* Frameworks */,
+				50773D5223A2593800B992BF /* Resources */,
+				F080FAF68E8CFF9A6CF56FC6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Art Shop";
+			productName = "Art Shop";
+			productReference = 50773D5423A2593800B992BF /* Art Shop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		50773D6E23A278D100B992BF /* Art Shop Admin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50773D8023A278D500B992BF /* Build configuration list for PBXNativeTarget "Art Shop Admin" */;
+			buildPhases = (
+				8BC7CF79BFAE5EE0CF32713E /* [CP] Check Pods Manifest.lock */,
+				50773D6B23A278D100B992BF /* Sources */,
+				50773D6C23A278D100B992BF /* Frameworks */,
+				50773D6D23A278D100B992BF /* Resources */,
+				9612B59E90AD5AB79BAB29E4 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Art Shop Admin";
+			productName = "Art Shop Admin";
+			productReference = 50773D6F23A278D100B992BF /* Art Shop Admin.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50773D4C23A2593700B992BF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1120;
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = Max;
+				TargetAttributes = {
+					50773D5323A2593800B992BF = {
+						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1130;
+					};
+					50773D6E23A278D100B992BF = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 50773D4F23A2593800B992BF /* Build configuration list for PBXProject "Art Shop" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 50773D4B23A2593700B992BF;
+			productRefGroup = 50773D5523A2593800B992BF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50773D5323A2593800B992BF /* Art Shop */,
+				50773D6E23A278D100B992BF /* Art Shop Admin */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		50773D5223A2593800B992BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50773D6423A2594000B992BF /* LounchScreen.storyboard in Resources */,
+				49E3D97823A54EC500953CF1 /* GoogleService-Info.plist in Resources */,
+				50773D6123A2594000B992BF /* Assets.xcassets in Resources */,
+				50773D5F23A2593800B992BF /* LoginStoryboard.storyboard in Resources */,
+				49B78A2923AAB75D00FCD5ED /* ForgotPasswordVC.xib in Resources */,
+				495845FC23A5635A00245772 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50773D6D23A278D100B992BF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49E3D97A23A5502900953CF1 /* GoogleService-Info-2.plist in Resources */,
+				50773D7E23A278D500B992BF /* LaunchScreen.storyboard in Resources */,
+				50773D7B23A278D500B992BF /* Assets.xcassets in Resources */,
+				50773D8323A278DF00B992BF /* Assets.xcassets in Resources */,
+				50773D7923A278D100B992BF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8BC7CF79BFAE5EE0CF32713E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Art Shop Admin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9612B59E90AD5AB79BAB29E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Art Shop Admin/Pods-Art Shop Admin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Art Shop Admin/Pods-Art Shop Admin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Art Shop Admin/Pods-Art Shop Admin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B3CD2F79CA383475E5E53E4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Art Shop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F080FAF68E8CFF9A6CF56FC6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Art Shop/Pods-Art Shop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Art Shop/Pods-Art Shop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Art Shop/Pods-Art Shop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50773D5023A2593800B992BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4958460923A81A8A00245772 /* RoundedViews.swift in Sources */,
+				50773D5C23A2593800B992BF /* HomeVC.swift in Sources */,
+				50773D5823A2593800B992BF /* AppDelegate.swift in Sources */,
+				4958460523A56DF200245772 /* LoginVC.swift in Sources */,
+				50773D5A23A2593800B992BF /* SceneDelegate.swift in Sources */,
+				4958460723A56E0300245772 /* RegisterVC.swift in Sources */,
+				49B78A2823AAB75D00FCD5ED /* ForgotPasswordVC.swift in Sources */,
+				49B78A2423AA417200FCD5ED /* Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50773D6B23A278D100B992BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50773D7623A278D100B992BF /* ViewController.swift in Sources */,
+				50773D7223A278D100B992BF /* AppDelegate.swift in Sources */,
+				50773D7423A278D100B992BF /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		50773D5D23A2593800B992BF /* LoginStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50773D5E23A2593800B992BF /* Base */,
+			);
+			name = LoginStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		50773D6223A2594000B992BF /* LounchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50773D6323A2594000B992BF /* Base */,
+			);
+			name = LounchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		50773D7723A278D100B992BF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50773D7823A278D100B992BF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		50773D7C23A278D500B992BF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50773D7D23A278D500B992BF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		50773D6623A2594000B992BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		50773D6723A2594000B992BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		50773D6923A2594000B992BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E60BA7C79381F84466E8ADF /* Pods-Art Shop.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Art Shop/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "max.ru.Art-Shop";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		50773D6A23A2594000B992BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3771E85DCBF9FF011BFC6196 /* Pods-Art Shop.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Art Shop/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "max.ru.Art-Shop";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		50773D8123A278D500B992BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A5A57D4DF51DE37A1EFF669 /* Pods-Art Shop Admin.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Art Shop Admin/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "max.ru.Art-Shop-Admin";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		50773D8223A278D500B992BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52CC0325EE12BC772BA31F6C /* Pods-Art Shop Admin.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Art Shop Admin/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "max.ru.Art-Shop-Admin";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50773D4F23A2593800B992BF /* Build configuration list for PBXProject "Art Shop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50773D6623A2594000B992BF /* Debug */,
+				50773D6723A2594000B992BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50773D6823A2594000B992BF /* Build configuration list for PBXNativeTarget "Art Shop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50773D6923A2594000B992BF /* Debug */,
+				50773D6A23A2594000B992BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50773D8023A278D500B992BF /* Build configuration list for PBXNativeTarget "Art Shop Admin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50773D8123A278D500B992BF /* Debug */,
+				50773D8223A278D500B992BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50773D4C23A2593700B992BF /* Project object */;
+}

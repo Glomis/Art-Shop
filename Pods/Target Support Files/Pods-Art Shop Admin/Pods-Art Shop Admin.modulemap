@@ -1,0 +1,6 @@
+framework module Pods_Art_Shop_Admin {
+  umbrella header "Pods-Art Shop Admin-umbrella.h"
+
+  export *
+  module * { export * }
+}
