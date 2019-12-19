@@ -15,7 +15,38 @@
                     <view key="view" contentMode="scaleToFill" id="RfS-39-Rwh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_cat3" translatesAutoresizingMaskIntoConstraints="NO" id="vqe-wM-2Dn">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XVI-Ci-RYz">
+                                <rect key="frame" x="20" y="88" width="374" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TCt-gN-bwO">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="Hs4-Ka-j6w">
+                                <rect key="frame" x="20" y="44" width="374" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="XVI-Ci-RYz" secondAttribute="bottom" id="11W-j0-r8z"/>
+                            <constraint firstItem="XVI-Ci-RYz" firstAttribute="leading" secondItem="C7R-wq-Wzl" secondAttribute="leading" constant="20" id="GQE-Q1-Ccq"/>
+                            <constraint firstItem="vqe-wM-2Dn" firstAttribute="top" secondItem="C7R-wq-Wzl" secondAttribute="top" id="Kdd-QF-Yta"/>
+                            <constraint firstItem="vqe-wM-2Dn" firstAttribute="leading" secondItem="C7R-wq-Wzl" secondAttribute="leading" id="SAD-Jh-jBo"/>
+                            <constraint firstAttribute="bottom" secondItem="vqe-wM-2Dn" secondAttribute="bottom" id="d0P-z5-H4T"/>
+                            <constraint firstItem="XVI-Ci-RYz" firstAttribute="top" secondItem="C7R-wq-Wzl" secondAttribute="top" id="jQJ-4n-Vsl"/>
+                            <constraint firstItem="C7R-wq-Wzl" firstAttribute="trailing" secondItem="XVI-Ci-RYz" secondAttribute="trailing" constant="20" id="tBa-gN-BoN"/>
+                            <constraint firstItem="C7R-wq-Wzl" firstAttribute="trailing" secondItem="vqe-wM-2Dn" secondAttribute="trailing" id="v1b-1w-4mA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="C7R-wq-Wzl"/>
                     </view>
                     <navigationItem key="navigationItem" id="SM9-QV-mb7">
@@ -26,6 +57,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="Hs4-Ka-j6w" id="UJs-gr-ZTl"/>
+                        <outlet property="collectionView" destination="XVI-Ci-RYz" id="uba-PL-Bnm"/>
                         <outlet property="loginBtn" destination="0UV-Lc-bhO" id="wPC-mU-U1k"/>
                     </connections>
                 </viewController>
@@ -52,4 +85,7 @@
             <point key="canvasLocation" x="24.637681159420293" y="77.678571428571431"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg_cat3" width="1500" height="1875"/>
+    </resources>
 </document>
