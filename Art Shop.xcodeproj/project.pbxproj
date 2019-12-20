@@ -17,6 +17,10 @@
 		49B78A2923AAB75D00FCD5ED /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49B78A2723AAB75D00FCD5ED /* ForgotPasswordVC.xib */; };
 		49B78A2B23AB9A9B00FCD5ED /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B78A2A23AB9A9B00FCD5ED /* Category.swift */; };
 		49B78A2C23AB9A9B00FCD5ED /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B78A2A23AB9A9B00FCD5ED /* Category.swift */; };
+		49B78A2F23AC0C5900FCD5ED /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B78A2D23AC0C5900FCD5ED /* CategoryCell.swift */; };
+		49B78A3023AC0C5900FCD5ED /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B78A2D23AC0C5900FCD5ED /* CategoryCell.swift */; };
+		49B78A3123AC0C5900FCD5ED /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49B78A2E23AC0C5900FCD5ED /* CategoryCell.xib */; };
+		49B78A3223AC0C5900FCD5ED /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49B78A2E23AC0C5900FCD5ED /* CategoryCell.xib */; };
 		49E3D97823A54EC500953CF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49E3D97723A54EC500953CF1 /* GoogleService-Info.plist */; };
 		49E3D97A23A5502900953CF1 /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49E3D97923A5502900953CF1 /* GoogleService-Info-2.plist */; };
 		50773D5823A2593800B992BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50773D5723A2593800B992BF /* AppDelegate.swift */; };
@@ -46,6 +50,8 @@
 		49B78A2623AAB75D00FCD5ED /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
 		49B78A2723AAB75D00FCD5ED /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
 		49B78A2A23AB9A9B00FCD5ED /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		49B78A2D23AC0C5900FCD5ED /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		49B78A2E23AC0C5900FCD5ED /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		49E3D97723A54EC500953CF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		49E3D97923A5502900953CF1 /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
 		50773D5423A2593800B992BF /* Art Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Art Shop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				49B78A2A23AB9A9B00FCD5ED /* Category.swift */,
+				49B78A2D23AC0C5900FCD5ED /* CategoryCell.swift */,
+				49B78A2E23AC0C5900FCD5ED /* CategoryCell.xib */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -293,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50773D6423A2594000B992BF /* LounchScreen.storyboard in Resources */,
+				49B78A3123AC0C5900FCD5ED /* CategoryCell.xib in Resources */,
 				49E3D97823A54EC500953CF1 /* GoogleService-Info.plist in Resources */,
 				50773D6123A2594000B992BF /* Assets.xcassets in Resources */,
 				50773D5F23A2593800B992BF /* LoginStoryboard.storyboard in Resources */,
@@ -306,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49E3D97A23A5502900953CF1 /* GoogleService-Info-2.plist in Resources */,
+				49B78A3223AC0C5900FCD5ED /* CategoryCell.xib in Resources */,
 				50773D7E23A278D500B992BF /* LaunchScreen.storyboard in Resources */,
 				50773D7B23A278D500B992BF /* Assets.xcassets in Resources */,
 				50773D8323A278DF00B992BF /* Assets.xcassets in Resources */,
@@ -402,6 +412,7 @@
 				4958460723A56E0300245772 /* RegisterVC.swift in Sources */,
 				49B78A2823AAB75D00FCD5ED /* ForgotPasswordVC.swift in Sources */,
 				49B78A2423AA417200FCD5ED /* Extensions.swift in Sources */,
+				49B78A2F23AC0C5900FCD5ED /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +424,7 @@
 				50773D7223A278D100B992BF /* AppDelegate.swift in Sources */,
 				50773D7423A278D100B992BF /* SceneDelegate.swift in Sources */,
 				49B78A2C23AB9A9B00FCD5ED /* Category.swift in Sources */,
+				49B78A3023AC0C5900FCD5ED /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

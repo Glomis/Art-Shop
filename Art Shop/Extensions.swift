@@ -27,3 +27,7 @@ extension UIViewController {
         present(alert, animated: true, completion: nil)
     }
 }
+
+struct Identifires {
+    static let categoryCell = "CategoryCell"
+}
