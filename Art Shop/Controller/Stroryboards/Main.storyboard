@@ -16,36 +16,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_cat3" translatesAutoresizingMaskIntoConstraints="NO" id="vqe-wM-2Dn">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_cat3" translatesAutoresizingMaskIntoConstraints="NO" id="EZd-oo-S2R">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XVI-Ci-RYz">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IKS-E3-lZb">
                                 <rect key="frame" x="20" y="88" width="374" height="808"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TCt-gN-bwO">
-                                    <size key="itemSize" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7lC-7r-d9W">
+                                    <size key="itemSize" width="144" height="194"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" id="Hs4-Ka-j6w">
-                                <rect key="frame" x="20" y="44" width="374" height="808"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="color" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="XVI-Ci-RYz" secondAttribute="bottom" id="11W-j0-r8z"/>
-                            <constraint firstItem="XVI-Ci-RYz" firstAttribute="leading" secondItem="C7R-wq-Wzl" secondAttribute="leading" constant="20" id="GQE-Q1-Ccq"/>
-                            <constraint firstItem="vqe-wM-2Dn" firstAttribute="top" secondItem="C7R-wq-Wzl" secondAttribute="top" id="Kdd-QF-Yta"/>
-                            <constraint firstItem="vqe-wM-2Dn" firstAttribute="leading" secondItem="C7R-wq-Wzl" secondAttribute="leading" id="SAD-Jh-jBo"/>
-                            <constraint firstAttribute="bottom" secondItem="vqe-wM-2Dn" secondAttribute="bottom" id="d0P-z5-H4T"/>
-                            <constraint firstItem="XVI-Ci-RYz" firstAttribute="top" secondItem="C7R-wq-Wzl" secondAttribute="top" id="jQJ-4n-Vsl"/>
-                            <constraint firstItem="C7R-wq-Wzl" firstAttribute="trailing" secondItem="XVI-Ci-RYz" secondAttribute="trailing" constant="20" id="tBa-gN-BoN"/>
-                            <constraint firstItem="C7R-wq-Wzl" firstAttribute="trailing" secondItem="vqe-wM-2Dn" secondAttribute="trailing" id="v1b-1w-4mA"/>
+                            <constraint firstItem="EZd-oo-S2R" firstAttribute="leading" secondItem="C7R-wq-Wzl" secondAttribute="leading" id="Cde-9F-4kE"/>
+                            <constraint firstItem="EZd-oo-S2R" firstAttribute="top" secondItem="C7R-wq-Wzl" secondAttribute="top" id="H3R-ff-ick"/>
+                            <constraint firstAttribute="bottom" secondItem="EZd-oo-S2R" secondAttribute="bottom" id="XYY-SC-hp7"/>
+                            <constraint firstItem="C7R-wq-Wzl" firstAttribute="trailing" secondItem="IKS-E3-lZb" secondAttribute="trailing" constant="20" id="Y7s-Z0-zhI"/>
+                            <constraint firstItem="C7R-wq-Wzl" firstAttribute="trailing" secondItem="EZd-oo-S2R" secondAttribute="trailing" id="eTK-kA-mOG"/>
+                            <constraint firstAttribute="bottom" secondItem="IKS-E3-lZb" secondAttribute="bottom" id="mu0-jo-07y"/>
+                            <constraint firstItem="IKS-E3-lZb" firstAttribute="leading" secondItem="C7R-wq-Wzl" secondAttribute="leading" constant="20" id="tWa-wP-d94"/>
+                            <constraint firstItem="IKS-E3-lZb" firstAttribute="top" secondItem="C7R-wq-Wzl" secondAttribute="top" id="xbj-wB-XKG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="C7R-wq-Wzl"/>
                     </view>
@@ -57,8 +52,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="activityIndicator" destination="Hs4-Ka-j6w" id="UJs-gr-ZTl"/>
-                        <outlet property="collectionView" destination="XVI-Ci-RYz" id="uba-PL-Bnm"/>
+                        <outlet property="collectionView" destination="IKS-E3-lZb" id="Haq-0L-r0n"/>
                         <outlet property="loginBtn" destination="0UV-Lc-bhO" id="wPC-mU-U1k"/>
                     </connections>
                 </viewController>

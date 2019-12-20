@@ -28,6 +28,6 @@ extension UIViewController {
     }
 }
 
-struct Identifires {
-    static let categoryCell = "CategoryCell"
+struct Identifiers {
+    static let CategoryCell = "CategoryCell"
 }
