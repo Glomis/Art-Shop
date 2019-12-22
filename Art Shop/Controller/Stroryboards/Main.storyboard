@@ -54,11 +54,50 @@
                     <connections>
                         <outlet property="collectionView" destination="IKS-E3-lZb" id="Haq-0L-r0n"/>
                         <outlet property="loginBtn" destination="0UV-Lc-bhO" id="wPC-mU-U1k"/>
+                        <segue destination="5zc-UL-WVh" kind="show" identifier="toProductsVC" id="2Ya-jS-esm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LXn-NN-wCi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="934.78260869565224" y="77.678571428571431"/>
+        </scene>
+        <!--ProductsVC-->
+        <scene sceneID="5PO-E3-7BW">
+            <objects>
+                <viewController id="5zc-UL-WVh" customClass="ProductsVC" customModule="Art_Shop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tRg-l2-C2b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_cat3" translatesAutoresizingMaskIntoConstraints="NO" id="eCv-m0-i9G">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TTJ-0L-9rW">
+                                <rect key="frame" x="20" y="88" width="374" height="808"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="TTJ-0L-9rW" firstAttribute="top" secondItem="xpY-k3-fOP" secondAttribute="top" id="1pq-wH-WkP"/>
+                            <constraint firstItem="eCv-m0-i9G" firstAttribute="leading" secondItem="tRg-l2-C2b" secondAttribute="leading" id="6an-sC-Z4r"/>
+                            <constraint firstItem="eCv-m0-i9G" firstAttribute="top" secondItem="xpY-k3-fOP" secondAttribute="top" id="9aS-Om-pcA"/>
+                            <constraint firstItem="xpY-k3-fOP" firstAttribute="trailing" secondItem="eCv-m0-i9G" secondAttribute="trailing" id="Smx-rx-ED7"/>
+                            <constraint firstAttribute="bottom" secondItem="eCv-m0-i9G" secondAttribute="bottom" id="WAQ-8j-CY5"/>
+                            <constraint firstItem="TTJ-0L-9rW" firstAttribute="leading" secondItem="xpY-k3-fOP" secondAttribute="leading" constant="20" id="aIg-S5-fs3"/>
+                            <constraint firstItem="xpY-k3-fOP" firstAttribute="trailing" secondItem="TTJ-0L-9rW" secondAttribute="trailing" constant="20" id="qhN-Ip-7Bu"/>
+                            <constraint firstAttribute="bottom" secondItem="TTJ-0L-9rW" secondAttribute="bottom" id="vkw-Zb-aIf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xpY-k3-fOP"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5ag-4f-88X"/>
+                    <connections>
+                        <outlet property="tableView" destination="TTJ-0L-9rW" id="Svh-VI-rGD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xBg-Ps-QCq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1978" y="78"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="m5Z-h5-ef3">
@@ -71,7 +110,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="HlL-ze-zgB" kind="relationship" relationship="rootViewController" id="Lkl-1n-3Gw"/>
+                        <segue destination="HlL-ze-zgB" kind="relationship" relationship="rootViewController" id="2HT-kd-Jeb"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VdC-i0-BsW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

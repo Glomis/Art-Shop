@@ -21,6 +21,13 @@
 		49C0209623AD547700DD151C /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C0209323AD547700DD151C /* CategoryCell.swift */; };
 		49C0209723AD547700DD151C /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C0209423AD547700DD151C /* CategoryCell.xib */; };
 		49C0209823AD547700DD151C /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C0209423AD547700DD151C /* CategoryCell.xib */; };
+		49C0209A23AFED7000DD151C /* ProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C0209923AFED7000DD151C /* ProductsVC.swift */; };
+		49C0209C23AFEE5E00DD151C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C0209B23AFEE5E00DD151C /* Product.swift */; };
+		49C0209D23AFEE5E00DD151C /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C0209B23AFEE5E00DD151C /* Product.swift */; };
+		49C020A023AFF09600DD151C /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C0209E23AFF09600DD151C /* ProductCell.swift */; };
+		49C020A123AFF09600DD151C /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C0209E23AFF09600DD151C /* ProductCell.swift */; };
+		49C020A223AFF09600DD151C /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C0209F23AFF09600DD151C /* ProductCell.xib */; };
+		49C020A323AFF09600DD151C /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C0209F23AFF09600DD151C /* ProductCell.xib */; };
 		49E3D97823A54EC500953CF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49E3D97723A54EC500953CF1 /* GoogleService-Info.plist */; };
 		49E3D97A23A5502900953CF1 /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49E3D97923A5502900953CF1 /* GoogleService-Info-2.plist */; };
 		50773D5823A2593800B992BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50773D5723A2593800B992BF /* AppDelegate.swift */; };
@@ -52,6 +59,10 @@
 		49B78A2A23AB9A9B00FCD5ED /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		49C0209323AD547700DD151C /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		49C0209423AD547700DD151C /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		49C0209923AFED7000DD151C /* ProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsVC.swift; sourceTree = "<group>"; };
+		49C0209B23AFEE5E00DD151C /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		49C0209E23AFF09600DD151C /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		49C0209F23AFF09600DD151C /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		49E3D97723A54EC500953CF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		49E3D97923A5502900953CF1 /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
 		50773D5423A2593800B992BF /* Art Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Art Shop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				49B78A2A23AB9A9B00FCD5ED /* Category.swift */,
+				49C0209B23AFEE5E00DD151C /* Product.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -125,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				50773D5B23A2593800B992BF /* HomeVC.swift */,
+				49C0209923AFED7000DD151C /* ProductsVC.swift */,
 				4958460423A56DF200245772 /* LoginVC.swift */,
 				4958460623A56E0300245772 /* RegisterVC.swift */,
 				50773D5723A2593800B992BF /* AppDelegate.swift */,
@@ -151,6 +164,8 @@
 				49B78A2723AAB75D00FCD5ED /* ForgotPasswordVC.xib */,
 				49C0209323AD547700DD151C /* CategoryCell.swift */,
 				49C0209423AD547700DD151C /* CategoryCell.xib */,
+				49C0209E23AFF09600DD151C /* ProductCell.swift */,
+				49C0209F23AFF09600DD151C /* ProductCell.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -301,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50773D6423A2594000B992BF /* LounchScreen.storyboard in Resources */,
+				49C020A223AFF09600DD151C /* ProductCell.xib in Resources */,
 				49C0209723AD547700DD151C /* CategoryCell.xib in Resources */,
 				49E3D97823A54EC500953CF1 /* GoogleService-Info.plist in Resources */,
 				50773D6123A2594000B992BF /* Assets.xcassets in Resources */,
@@ -316,6 +332,7 @@
 			files = (
 				49E3D97A23A5502900953CF1 /* GoogleService-Info-2.plist in Resources */,
 				49C0209823AD547700DD151C /* CategoryCell.xib in Resources */,
+				49C020A323AFF09600DD151C /* ProductCell.xib in Resources */,
 				50773D7E23A278D500B992BF /* LaunchScreen.storyboard in Resources */,
 				50773D7B23A278D500B992BF /* Assets.xcassets in Resources */,
 				50773D8323A278DF00B992BF /* Assets.xcassets in Resources */,
@@ -405,12 +422,15 @@
 			files = (
 				4958460923A81A8A00245772 /* RoundedViews.swift in Sources */,
 				50773D5C23A2593800B992BF /* HomeVC.swift in Sources */,
+				49C0209A23AFED7000DD151C /* ProductsVC.swift in Sources */,
 				50773D5823A2593800B992BF /* AppDelegate.swift in Sources */,
+				49C020A023AFF09600DD151C /* ProductCell.swift in Sources */,
 				4958460523A56DF200245772 /* LoginVC.swift in Sources */,
 				50773D5A23A2593800B992BF /* SceneDelegate.swift in Sources */,
 				49B78A2B23AB9A9B00FCD5ED /* Category.swift in Sources */,
 				4958460723A56E0300245772 /* RegisterVC.swift in Sources */,
 				49B78A2823AAB75D00FCD5ED /* ForgotPasswordVC.swift in Sources */,
+				49C0209C23AFEE5E00DD151C /* Product.swift in Sources */,
 				49B78A2423AA417200FCD5ED /* Extensions.swift in Sources */,
 				49C0209523AD547700DD151C /* CategoryCell.swift in Sources */,
 			);
@@ -423,7 +443,9 @@
 				50773D7623A278D100B992BF /* ViewController.swift in Sources */,
 				50773D7223A278D100B992BF /* AppDelegate.swift in Sources */,
 				50773D7423A278D100B992BF /* SceneDelegate.swift in Sources */,
+				49C0209D23AFEE5E00DD151C /* Product.swift in Sources */,
 				49B78A2C23AB9A9B00FCD5ED /* Category.swift in Sources */,
+				49C020A123AFF09600DD151C /* ProductCell.swift in Sources */,
 				49C0209623AD547700DD151C /* CategoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
