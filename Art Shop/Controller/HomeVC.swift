@@ -9,18 +9,19 @@
 import UIKit
 import Firebase
 
+
 class HomeVC: UIViewController {
     
     @IBOutlet weak var loginBtn: UIBarButtonItem!
     @IBOutlet weak var collectionView: UICollectionView!
     
     var categories = [Category]()
+    var selectedCategory: Category!
+    var listener: ListenerRegistration!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let category = Category.init(name: "Fuck YEAH!", id: "fwefwe", imgUrl: "https://images.unsplash.com/photo-1576790359694-14504775f70d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60", isActive: true, timeStamp: Timestamp())
-        categories.append(category)
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -37,14 +38,47 @@ class HomeVC: UIViewController {
         
     }
     
+    func fetchDocument() {
+        let docRef = Firestore.firestore().collection("categories").document("8EayF4mb9WUGiNY32mmV")
+        docRef.getDocument { (snap, error) in
+            guard let data = snap?.data() else { return }
+            
+            let newCategory = Category.init(data: data)
+            self.categories.append(newCategory)
+            self.collectionView.reloadData()
+        }
+    }
+    
+    func fetchCollection() {
+        let collectionRef = Firestore.firestore().collection("categories")
+        
+        listener = collectionRef.addSnapshotListener { (snap, error) in
+            guard let documents = snap?.documents else { return }
+            
+            self.categories.removeAll()
+            for document in documents {
+                let data = document.data()
+                let newCategory = Category.init(data: data)
+                self.categories.append(newCategory)
+            }
+            self.collectionView.reloadData()
+        }
+    }
+    
     
     override func viewDidAppear(_ animated: Bool) {
+        // fetchDocument()
+        fetchCollection()
         
         if let user = Auth.auth().currentUser, !user.isAnonymous {
             loginBtn.title = "Logout"
         } else { 
             loginBtn.title = "Login"
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        listener.remove()
     }
     
     
@@ -101,10 +135,23 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollec
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let width = view.frame.width
-        let cellWidth = (width - 50) / 2
+        let cellWidth = (width - 30) / 2
         let cellHeight = cellWidth * 1.5
         
         return CGSize(width: cellWidth, height: cellHeight)
     }
     
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedCategory = categories[indexPath.item]
+        performSegue(withIdentifier: "toProductsVC", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toProductsVC" {
+            if let destination = segue.destination as? ProductsVC {
+                destination.category = selectedCategory
+            }
+        }
+    }
 }
