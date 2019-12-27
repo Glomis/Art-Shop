@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductDetailVC" customModule="Art_Shop" customModuleProvider="target">
+            <connections>
+                <outlet property="bgView" destination="ev7-vv-rW5" id="ie5-ot-SHz"/>
+                <outlet property="productDescription" destination="Kej-1M-4w3" id="XqY-5r-br3"/>
+                <outlet property="productImg" destination="aT5-AW-h3O" id="PHb-HQ-cKL"/>
+                <outlet property="productName" destination="D2p-WQ-MVA" id="kBB-RH-myu"/>
+                <outlet property="productPrice" destination="1K6-Cu-ugg" id="MAo-Yp-HCW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ev7-vv-rW5">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hl7-Mg-Kab">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <gestureRecognizers/>
+                    <blurEffect style="light"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="UZz-m5-gzT" appends="YES" id="MS6-vn-HbN"/>
+                    </connections>
+                </visualEffectView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xYe-r7-saN" customClass="roundedView" customModule="Art_Shop" customModuleProvider="target">
+                    <rect key="frame" x="20" y="165.5" width="374" height="565"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="Tjv-3I-fe7">
+                            <rect key="frame" x="20" y="20" width="334" height="525"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="animal_5" translatesAutoresizingMaskIntoConstraints="NO" id="aT5-AW-h3O" customClass="roundedImageView" customModule="Art_Shop" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="334" height="260"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="260" id="MhU-iw-uwo"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D2p-WQ-MVA">
+                                    <rect key="frame" x="0.0" y="278" width="334" height="29"/>
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
+                                    <color key="textColor" red="0.1764705882" green="0.30196078430000001" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1K6-Cu-ugg">
+                                    <rect key="frame" x="0.0" y="325" width="334" height="32.5"/>
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
+                                    <color key="textColor" red="0.1764705882" green="0.30196078430000001" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kej-1M-4w3">
+                                    <rect key="frame" x="0.0" y="375.5" width="334" height="23.5"/>
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                    <color key="textColor" red="0.1764705882" green="0.30196078430000001" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mWv-tp-Gg5" customClass="roundedButton" customModule="Art_Shop" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="417" width="334" height="45"/>
+                                    <color key="backgroundColor" red="0.1764705882" green="0.30196078430000001" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="LFp-uZ-0ht"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                    <state key="normal" title="Add to Cart">
+                                        <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="addToCartClicked:" destination="-1" eventType="touchUpInside" id="oq1-a5-OZk"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUF-5E-T1q" customClass="roundedButton" customModule="Art_Shop" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="480" width="334" height="45"/>
+                                    <color key="backgroundColor" red="1" green="0.21176470589999999" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="CKe-Y3-k2f"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                    <state key="normal" title="Keep Shopping">
+                                        <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="keepShoppingClicked:" destination="-1" eventType="touchUpInside" id="9wO-1D-H5K"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Tjv-3I-fe7" secondAttribute="trailing" constant="20" id="Uff-7O-Ke9"/>
+                        <constraint firstAttribute="bottom" secondItem="Tjv-3I-fe7" secondAttribute="bottom" constant="20" id="Xwi-wM-RXQ"/>
+                        <constraint firstItem="Tjv-3I-fe7" firstAttribute="leading" secondItem="xYe-r7-saN" secondAttribute="leading" constant="20" id="gfD-i2-cJ2"/>
+                        <constraint firstItem="Tjv-3I-fe7" firstAttribute="top" secondItem="xYe-r7-saN" secondAttribute="top" constant="20" id="vUf-EJ-Z94"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xYe-r7-saN" secondAttribute="trailing" constant="20" id="378-go-pVH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ev7-vv-rW5" secondAttribute="trailing" id="49H-ci-Hdn"/>
+                <constraint firstItem="xYe-r7-saN" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="DRj-Lc-Zr5"/>
+                <constraint firstItem="xYe-r7-saN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="H1E-Kt-igU"/>
+                <constraint firstItem="ev7-vv-rW5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Lbl-l9-RSu"/>
+                <constraint firstAttribute="bottom" secondItem="ev7-vv-rW5" secondAttribute="bottom" id="UpH-SZ-vcO"/>
+                <constraint firstItem="ev7-vv-rW5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="cVP-I1-oLl"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="140.57971014492756" y="129.91071428571428"/>
+        </view>
+        <tapGestureRecognizer id="UZz-m5-gzT">
+            <connections>
+                <action selector="tapAnyWay:" destination="-1" id="DZQ-TK-ZlN"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="animal_5" width="2122" height="1593"/>
+    </resources>
+</document>

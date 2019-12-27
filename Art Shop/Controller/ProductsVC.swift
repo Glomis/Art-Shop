@@ -15,23 +15,34 @@ class ProductsVC: UIViewController {
     
     var products = [Product]()
     var category: Category!
+    var listener: ListenerRegistration!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let product = Product.init(name: "Wow", id: "dqwf", category: "Nature", price: 22.22, productDiscription: "", imgUrl: "https://images.unsplash.com/photo-1573743338941-39db12ef9b64?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80", timeStamp: Timestamp(), stock: 0, favorite: false)
-        
-        let productOne = Product(name: "Amaizing", id: "egww", category: "Nature", price: 24.33, productDiscription: "Bla Bla One", imgUrl: "https://images.unsplash.com/photo-1572295727871-7638149ea3d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80", timeStamp: Timestamp(), stock: 0, favorite: false)
-        
-        products.append(product)
-        products.append(productOne)
-        
+        fetchCollection()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: Identifiers.ProductCell, bundle: nil), forCellReuseIdentifier: Identifiers.ProductCell)
     }
     
+    
+    func fetchCollection() {
+        let collectionRef = Firestore.firestore().collection("Products")
+        
+        listener = collectionRef.whereField("category", isEqualTo: category.id).addSnapshotListener { (snap, error) in
+            guard let documents = snap?.documents else { return }
+            
+            self.products.removeAll()
+            for document in documents {
+                let data = document.data()
+                let newProduct = Product.init(data: data)
+                self.products.append(newProduct)
+            }
+            self.tableView.reloadData()
+        }
+    }
 
 }
 
@@ -41,14 +52,27 @@ extension ProductsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+
         if let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.ProductCell, for: indexPath) as? ProductCell {
-            
+
             cell.configureCell(product: products[indexPath.row])
             return cell
         }
         return UITableViewCell()
     }
+    
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        
+        let vc = ProductDetailVC()
+        vc.modalTransitionStyle = .crossDissolve
+        vc.modalPresentationStyle = .overCurrentContext
+        
+        let selectedProduct = products[indexPath.row]
+        vc.product = selectedProduct
+        present(vc, animated: true, completion: nil)
+    }
+        
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200

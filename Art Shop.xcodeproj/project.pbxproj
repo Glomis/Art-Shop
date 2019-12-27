@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		203E86BD92B65DFFADFDC551 /* Pods_Art_Shop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46F566CE7ACC6D706AFB6E65 /* Pods_Art_Shop.framework */; };
+		4909296923B69AF1007867E8 /* ProductDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4909296723B69AF1007867E8 /* ProductDetailVC.swift */; };
+		4909296A23B69AF1007867E8 /* ProductDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4909296823B69AF1007867E8 /* ProductDetailVC.xib */; };
 		495845FC23A5635A00245772 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 495845FB23A5635A00245772 /* Main.storyboard */; };
 		4958460523A56DF200245772 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4958460423A56DF200245772 /* LoginVC.swift */; };
 		4958460723A56E0300245772 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4958460623A56E0300245772 /* RegisterVC.swift */; };
@@ -49,6 +51,8 @@
 /* Begin PBXFileReference section */
 		3771E85DCBF9FF011BFC6196 /* Pods-Art Shop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Art Shop.release.xcconfig"; path = "Pods/Target Support Files/Pods-Art Shop/Pods-Art Shop.release.xcconfig"; sourceTree = "<group>"; };
 		46F566CE7ACC6D706AFB6E65 /* Pods_Art_Shop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Art_Shop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4909296723B69AF1007867E8 /* ProductDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVC.swift; sourceTree = "<group>"; };
+		4909296823B69AF1007867E8 /* ProductDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailVC.xib; sourceTree = "<group>"; };
 		495845FB23A5635A00245772 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4958460423A56DF200245772 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		4958460623A56E0300245772 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
@@ -166,6 +170,8 @@
 				49C0209423AD547700DD151C /* CategoryCell.xib */,
 				49C0209E23AFF09600DD151C /* ProductCell.swift */,
 				49C0209F23AFF09600DD151C /* ProductCell.xib */,
+				4909296723B69AF1007867E8 /* ProductDetailVC.swift */,
+				4909296823B69AF1007867E8 /* ProductDetailVC.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -321,6 +327,7 @@
 				49E3D97823A54EC500953CF1 /* GoogleService-Info.plist in Resources */,
 				50773D6123A2594000B992BF /* Assets.xcassets in Resources */,
 				50773D5F23A2593800B992BF /* LoginStoryboard.storyboard in Resources */,
+				4909296A23B69AF1007867E8 /* ProductDetailVC.xib in Resources */,
 				49B78A2923AAB75D00FCD5ED /* ForgotPasswordVC.xib in Resources */,
 				495845FC23A5635A00245772 /* Main.storyboard in Resources */,
 			);
@@ -433,6 +440,7 @@
 				49C0209C23AFEE5E00DD151C /* Product.swift in Sources */,
 				49B78A2423AA417200FCD5ED /* Extensions.swift in Sources */,
 				49C0209523AD547700DD151C /* CategoryCell.swift in Sources */,
+				4909296923B69AF1007867E8 /* ProductDetailVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

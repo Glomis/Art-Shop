@@ -12,9 +12,11 @@ import Firebase
 
 class HomeVC: UIViewController {
     
+    // Outlets
     @IBOutlet weak var loginBtn: UIBarButtonItem!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    // Variables
     var categories = [Category]()
     var selectedCategory: Category!
     var listener: ListenerRegistration!
@@ -37,16 +39,21 @@ class HomeVC: UIViewController {
         }
         
     }
+
     
-    func fetchDocument() {
-        let docRef = Firestore.firestore().collection("categories").document("8EayF4mb9WUGiNY32mmV")
-        docRef.getDocument { (snap, error) in
-            guard let data = snap?.data() else { return }
-            
-            let newCategory = Category.init(data: data)
-            self.categories.append(newCategory)
-            self.collectionView.reloadData()
+    override func viewDidAppear(_ animated: Bool) {
+
+        fetchCollection()
+        
+        if let user = Auth.auth().currentUser, !user.isAnonymous {
+            loginBtn.title = "Logout"
+        } else {
+            loginBtn.title = "Login"
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        listener.remove()
     }
     
     func fetchCollection() {
@@ -64,23 +71,6 @@ class HomeVC: UIViewController {
             self.collectionView.reloadData()
         }
     }
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-        // fetchDocument()
-        fetchCollection()
-        
-        if let user = Auth.auth().currentUser, !user.isAnonymous {
-            loginBtn.title = "Logout"
-        } else { 
-            loginBtn.title = "Login"
-        }
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        listener.remove()
-    }
-    
     
     fileprivate func presentHomeVC() {
         let storyBoard = UIStoryboard(name: "LoginStoryboard", bundle: nil)
@@ -113,7 +103,13 @@ class HomeVC: UIViewController {
         }
     }
     
+    @IBAction func shopClicked(_ sender: Any) {
+        
+    }
     
+    @IBAction func favoriteClicked(_ sender: Any) {
+        
+    }
     
 }
 
