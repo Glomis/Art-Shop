@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1017562171305-apgi3fbgk50c6869tj31c8kqcjaggfga.apps.googleusercontent.com</string>
+	<string>1017562171305-n0tqlgbnuqomh0elk4ahe8h43vtcinvf.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1017562171305-apgi3fbgk50c6869tj31c8kqcjaggfga</string>
+	<string>com.googleusercontent.apps.1017562171305-n0tqlgbnuqomh0elk4ahe8h43vtcinvf</string>
 	<key>API_KEY</key>
 	<string>AIzaSyA4XCwchkrERLauG70zmocVDxSW8DzNLps</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>max.ru.Art-Shop-Admin</string>
+	<string>max.ru.Art-Shop</string>
 	<key>PROJECT_ID</key>
 	<string>art-store-56d65</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1017562171305:ios:87bd785fc3f7af0486e6b8</string>
+	<string>1:1017562171305:ios:4e03116173c3731586e6b8</string>
 	<key>DATABASE_URL</key>
 	<string>https://art-store-56d65.firebaseio.com</string>
 </dict>

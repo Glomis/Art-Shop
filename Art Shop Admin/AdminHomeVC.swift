@@ -8,11 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class AdminHomeVC: HomeVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        navigationItem.leftBarButtonItem?.isEnabled = false
     }
 
 
