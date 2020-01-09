@@ -16,7 +16,14 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jq6-oV-hxY">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="barTintColor" red="0.1764705882" green="0.30196078430000001" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -65,8 +72,15 @@
                     </view>
                     <navigationItem key="navigationItem" title="Admin Art Shop" id="hMs-Vq-tig">
                         <barButtonItem key="leftBarButtonItem" title="Login" id="vQQ-Wb-2s0">
+                            <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <connections>
                                 <action selector="loginOutClicked:" destination="tNr-v9-8sq" id="h4W-83-H4M"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Add Caregory" id="wfF-fp-aAf">
+                            <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <connections>
+                                <segue destination="UCw-mc-Lmf" kind="push" id="wa2-jo-1uB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -79,8 +93,104 @@
             </objects>
             <point key="canvasLocation" x="1010" y="115"/>
         </scene>
+        <!--Add Edit CategoryVC-->
+        <scene sceneID="zCY-Ym-p1a">
+            <objects>
+                <viewController id="UCw-mc-Lmf" customClass="AddEditCategoryVC" customModule="Art_Shop_Admin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dmM-kQ-xvh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bn5-pJ-6V9">
+                                <rect key="frame" x="20" y="108" width="374" height="27.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="21"/>
+                                <color key="textColor" red="0.1764705882" green="0.30196078430000001" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap image to add Category Image" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEI-RJ-BLt">
+                                <rect key="frame" x="20" y="215.5" width="374" height="27.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="21"/>
+                                <color key="textColor" red="0.1764705882" green="0.30196078430000001" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Category Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hk2-BR-0iw">
+                                <rect key="frame" x="20" y="155.5" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ZiW-Hm-cEd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="tnO-Ba-H0L">
+                                <rect key="frame" x="188.5" y="583" width="37" height="37"/>
+                                <color key="color" red="0.1764705882" green="0.30196078430000001" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                            <imageView clipsSubviews="YES" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="M7L-eF-EOX" customClass="roundedImageView" customModule="Art_Shop_Admin" customModuleProvider="target">
+                                <rect key="frame" x="82" y="263" width="250" height="300"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Vdi-iH-5o8"/>
+                                    <constraint firstAttribute="width" constant="250" id="dgV-zn-3HN"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="PZz-Rd-bRY" appends="YES" id="UQ1-LH-mkt"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ea-KV-7SF" customClass="roundedButton" customModule="Art_Shop_Admin" customModuleProvider="target">
+                                <rect key="frame" x="20" y="792" width="374" height="40"/>
+                                <color key="backgroundColor" red="0.1764705882" green="0.30196078430000001" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Zld-Ng-oP9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="19"/>
+                                <state key="normal" title="Add Category">
+                                    <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="addCategoryCLicked:" destination="UCw-mc-Lmf" eventType="touchUpInside" id="w8I-ek-rPi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tnO-Ba-H0L" firstAttribute="centerX" secondItem="dmM-kQ-xvh" secondAttribute="centerX" id="1m4-rR-Lac"/>
+                            <constraint firstItem="qBh-k5-ifZ" firstAttribute="trailing" secondItem="hk2-BR-0iw" secondAttribute="trailing" constant="20" id="53E-x1-JQm"/>
+                            <constraint firstItem="M7L-eF-EOX" firstAttribute="centerX" secondItem="dmM-kQ-xvh" secondAttribute="centerX" id="5hw-La-idM"/>
+                            <constraint firstItem="tnO-Ba-H0L" firstAttribute="top" secondItem="M7L-eF-EOX" secondAttribute="bottom" constant="20" id="EFk-Le-LSI"/>
+                            <constraint firstItem="qBh-k5-ifZ" firstAttribute="trailing" secondItem="8Ea-KV-7SF" secondAttribute="trailing" constant="20" id="Map-MP-AMn"/>
+                            <constraint firstItem="bn5-pJ-6V9" firstAttribute="top" secondItem="qBh-k5-ifZ" secondAttribute="top" constant="20" id="NIf-vN-tBg"/>
+                            <constraint firstItem="8Ea-KV-7SF" firstAttribute="leading" secondItem="qBh-k5-ifZ" secondAttribute="leading" constant="20" id="Rhd-Y2-hNQ"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="8Ea-KV-7SF" secondAttribute="bottom" constant="30" id="Ytd-hF-W2M"/>
+                            <constraint firstItem="kEI-RJ-BLt" firstAttribute="top" secondItem="hk2-BR-0iw" secondAttribute="bottom" constant="20" id="bl8-X2-7qs"/>
+                            <constraint firstItem="bn5-pJ-6V9" firstAttribute="leading" secondItem="qBh-k5-ifZ" secondAttribute="leading" constant="20" id="cPs-tk-Vlu"/>
+                            <constraint firstItem="qBh-k5-ifZ" firstAttribute="trailing" secondItem="kEI-RJ-BLt" secondAttribute="trailing" constant="20" id="f5m-mV-bUH"/>
+                            <constraint firstItem="hk2-BR-0iw" firstAttribute="top" secondItem="bn5-pJ-6V9" secondAttribute="bottom" constant="20" id="mAV-yS-uSa"/>
+                            <constraint firstItem="qBh-k5-ifZ" firstAttribute="trailing" secondItem="bn5-pJ-6V9" secondAttribute="trailing" constant="20" id="mtM-3d-Zpb"/>
+                            <constraint firstItem="M7L-eF-EOX" firstAttribute="top" secondItem="kEI-RJ-BLt" secondAttribute="bottom" constant="20" id="r2t-Dz-elR"/>
+                            <constraint firstItem="hk2-BR-0iw" firstAttribute="leading" secondItem="qBh-k5-ifZ" secondAttribute="leading" constant="20" id="tQE-Fa-H94"/>
+                            <constraint firstItem="kEI-RJ-BLt" firstAttribute="leading" secondItem="qBh-k5-ifZ" secondAttribute="leading" constant="20" id="v48-bU-J0s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qBh-k5-ifZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="k5e-al-lO0"/>
+                    <connections>
+                        <outlet property="categoryImg" destination="M7L-eF-EOX" id="w6H-0c-bvg"/>
+                        <outlet property="categoryNameTF" destination="hk2-BR-0iw" id="Odz-W0-0JH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ra-jX-wez" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer delaysTouchesBegan="YES" id="PZz-Rd-bRY">
+                    <connections>
+                        <action selector="imageTaped:" destination="UCw-mc-Lmf" id="84o-tt-OWb"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1847.826086956522" y="114.50892857142857"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bg_cat3" width="1500" height="1875"/>
+        <image name="camera" width="66" height="54"/>
     </resources>
 </document>
