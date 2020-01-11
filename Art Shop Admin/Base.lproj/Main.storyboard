@@ -34,7 +34,7 @@
             </objects>
             <point key="canvasLocation" x="140.57971014492756" y="114.50892857142857"/>
         </scene>
-        <!--Admin Art Shop-->
+        <!--Admin-->
         <scene sceneID="7yS-aH-Hb7">
             <objects>
                 <viewController id="tNr-v9-8sq" customClass="AdminHomeVC" customModule="Art_Shop_Admin" customModuleProvider="target" sceneMemberID="viewController">
@@ -70,7 +70,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gcf-PP-8Ss"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Admin Art Shop" id="hMs-Vq-tig">
+                    <navigationItem key="navigationItem" title="Admin" id="hMs-Vq-tig">
                         <barButtonItem key="leftBarButtonItem" title="Login" id="vQQ-Wb-2s0">
                             <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <connections>
@@ -119,7 +119,7 @@
                                     <constraint firstAttribute="height" constant="40" id="ZiW-Hm-cEd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="tnO-Ba-H0L">
                                 <rect key="frame" x="188.5" y="583" width="37" height="37"/>
@@ -153,6 +153,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="tnO-Ba-H0L" firstAttribute="centerX" secondItem="dmM-kQ-xvh" secondAttribute="centerX" id="1m4-rR-Lac"/>
                             <constraint firstItem="qBh-k5-ifZ" firstAttribute="trailing" secondItem="hk2-BR-0iw" secondAttribute="trailing" constant="20" id="53E-x1-JQm"/>
@@ -172,6 +173,9 @@
                             <constraint firstItem="kEI-RJ-BLt" firstAttribute="leading" secondItem="qBh-k5-ifZ" secondAttribute="leading" constant="20" id="v48-bU-J0s"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qBh-k5-ifZ"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="tDS-Qp-98W" appends="YES" id="G4f-gV-scJ"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="k5e-al-lO0"/>
                     <connections>
@@ -183,6 +187,11 @@
                 <tapGestureRecognizer delaysTouchesBegan="YES" id="PZz-Rd-bRY">
                     <connections>
                         <action selector="imageTaped:" destination="UCw-mc-Lmf" id="84o-tt-OWb"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="tDS-Qp-98W">
+                    <connections>
+                        <action selector="tap:" destination="UCw-mc-Lmf" id="Jzq-je-GYW"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

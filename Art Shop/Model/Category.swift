@@ -23,4 +23,29 @@ struct Category {
         self.isActive = data["isActive"] as? Bool ?? true
         self.timeStamp = data["timeStamp"] as? Timestamp ?? Timestamp()
     }
+    
+    init(
+        name: String,
+        id: String,
+        imgUrl: String,
+        isActive: Bool = true,
+        timeStamp: Timestamp) {
+        
+        self.name = name
+        self.id = id
+        self.imgUrl = imgUrl
+        self.isActive = isActive
+        self.timeStamp = timeStamp
+    }
+    
+    static func categoryToModel(category: Category) -> [String: Any] {
+        let data: [String: Any] = [
+            "name" : category.name,
+            "id": category.id,
+            "imgUrl": category.imgUrl,
+            "isActive": category.isActive,
+            "timeStamp": category.timeStamp
+        ]
+        return data
+    }
 }
