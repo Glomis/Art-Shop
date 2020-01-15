@@ -37,13 +37,11 @@ class HomeVC: UIViewController {
                 }
             }
         }
-        
     }
-
     
     override func viewDidAppear(_ animated: Bool) {
-
-        fetchCollection()
+        
+        setCategoriesListener()
         
         if let user = Auth.auth().currentUser, !user.isAnonymous {
             loginBtn.title = "Logout"
@@ -54,24 +52,12 @@ class HomeVC: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         listener.remove()
+        categories.removeAll()
+        collectionView.reloadData()
     }
     
-    func fetchCollection() {
-        let collectionRef = Firestore.firestore().collection("categories")
-        
-        listener = collectionRef.addSnapshotListener { (snap, error) in
-            guard let documents = snap?.documents else { return }
-            
-            self.categories.removeAll()
-            for document in documents {
-                let data = document.data()
-                let newCategory = Category.init(data: data)
-                self.categories.append(newCategory)
-            }
-            self.collectionView.reloadData()
-        }
-    }
     
+    // Отображение главного экрана
     fileprivate func presentHomeVC() {
         let storyBoard = UIStoryboard(name: "LoginStoryboard", bundle: nil)
         let controller = storyBoard.instantiateViewController(withIdentifier: "loginVC")
@@ -80,6 +66,71 @@ class HomeVC: UIViewController {
     }
     
     
+    //MARK: Работа с категориями Firestore
+    func setCategoriesListener() {
+        listener = Firestore.firestore().collection("categories").addSnapshotListener({ (snap, error) in
+           
+            if let error = error {
+                debugPrint(error)
+                return
+            }
+            
+            snap?.documentChanges.forEach({ (change) in
+                
+                let data = change.document.data()
+                let category = Category.init(data: data)
+                
+                switch change.type {
+                case .added:
+                    self.doocumentAdded(change: change, category: category)
+                case .modified:
+                    self.documentModified(change: change, category: category)
+                case .removed:
+                    self.documentRemoved(change: change)
+                }
+            })
+        })
+    }
+    
+    func doocumentAdded(change: DocumentChange, category: Category) {
+        
+        let newIndex = Int(change.newIndex)
+        
+        categories.insert(category, at: newIndex)
+        collectionView.insertItems(at: [IndexPath(item: newIndex, section: 0)])
+    }
+    
+    func documentModified(change: DocumentChange, category: Category) {
+        if change.newIndex == change.oldIndex {
+            
+            let index = Int(change.newIndex)
+            
+            categories[index] = category
+            collectionView.reloadItems(at: [IndexPath(item: index, section: 0)])
+        } else {
+            
+            let oldIndex = Int(change.oldIndex)
+            let newIndex = Int(change.newIndex)
+            
+            categories.remove(at: oldIndex)
+            categories.insert(category, at: newIndex)
+            
+            collectionView.moveItem(at: IndexPath(item: oldIndex, section: 0),
+                                    to: IndexPath(item: newIndex, section: 0))
+        }
+    }
+    
+    func documentRemoved(change: DocumentChange) {
+        
+        let oldIndex = Int(change.oldIndex)
+        
+        categories.remove(at: oldIndex)
+        collectionView.deleteItems(at: [IndexPath(item: oldIndex, section: 0)])
+    }
+ 
+    //MARK: Действия
+    
+    // Кнопка Логин
     @IBAction func loginOutClicked(_ sender: Any) {
         
         guard let user = Auth.auth().currentUser else { return }
@@ -103,16 +154,20 @@ class HomeVC: UIViewController {
         }
     }
     
+    // Кнопка Магазин
     @IBAction func shopClicked(_ sender: Any) {
         
     }
     
+    // Кнопка Избранное
     @IBAction func favoriteClicked(_ sender: Any) {
         
     }
     
 }
 
+
+//MARK: Работа c Collection Delegate
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

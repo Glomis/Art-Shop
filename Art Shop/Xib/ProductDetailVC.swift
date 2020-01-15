@@ -35,7 +35,7 @@ class ProductDetailVC: UIViewController {
     
     func showCurrentProduct() {
         productName.text = product.name
-        productPrice.text = String(product.price)
+       // productPrice.text = String(product.price)
         productDescription.text = product.productDiscription
         if let url = URL(string: product.imgUrl) {
             productImg.kf.setImage(with: url)
@@ -53,7 +53,9 @@ class ProductDetailVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func tapAnywhere(_ sender: Any) {
+    
+    @IBAction func tap(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
 }

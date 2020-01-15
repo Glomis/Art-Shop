@@ -18,6 +18,7 @@
 		49474CDA23C278F6007FCE40 /* ProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C0209923AFED7000DD151C /* ProductsVC.swift */; };
 		49474CDC23C279B6007FCE40 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 49474CDB23C279B5007FCE40 /* GoogleService-Info.plist */; };
 		49474CDE23C74287007FCE40 /* AddEditCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49474CDD23C74287007FCE40 /* AddEditCategoryVC.swift */; };
+		49474CE023CB1F1B007FCE40 /* AdminProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49474CDF23CB1F1B007FCE40 /* AdminProductsVC.swift */; };
 		495845FC23A5635A00245772 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 495845FB23A5635A00245772 /* Main.storyboard */; };
 		4958460523A56DF200245772 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4958460423A56DF200245772 /* LoginVC.swift */; };
 		4958460723A56E0300245772 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4958460623A56E0300245772 /* RegisterVC.swift */; };
@@ -61,6 +62,7 @@
 		4909296823B69AF1007867E8 /* ProductDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductDetailVC.xib; sourceTree = "<group>"; };
 		49474CDB23C279B5007FCE40 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		49474CDD23C74287007FCE40 /* AddEditCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEditCategoryVC.swift; sourceTree = "<group>"; };
+		49474CDF23CB1F1B007FCE40 /* AdminProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProductsVC.swift; sourceTree = "<group>"; };
 		495845FB23A5635A00245772 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4958460423A56DF200245772 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		4958460623A56E0300245772 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				50773D7323A278D100B992BF /* SceneDelegate.swift */,
 				50773D7523A278D100B992BF /* AdminHomeVC.swift */,
 				49474CDD23C74287007FCE40 /* AddEditCategoryVC.swift */,
+				49474CDF23CB1F1B007FCE40 /* AdminProductsVC.swift */,
 				50773D7723A278D100B992BF /* Main.storyboard */,
 				50773D7C23A278D500B992BF /* LaunchScreen.storyboard */,
 				49474CDB23C279B5007FCE40 /* GoogleService-Info.plist */,
@@ -464,6 +467,7 @@
 				49474CD723C2789F007FCE40 /* Extensions.swift in Sources */,
 				49C0209D23AFEE5E00DD151C /* Product.swift in Sources */,
 				49474CDA23C278F6007FCE40 /* ProductsVC.swift in Sources */,
+				49474CE023CB1F1B007FCE40 /* AdminProductsVC.swift in Sources */,
 				49B78A2C23AB9A9B00FCD5ED /* Category.swift in Sources */,
 				49C020A123AFF09600DD151C /* ProductCell.swift in Sources */,
 				49C0209623AD547700DD151C /* CategoryCell.swift in Sources */,

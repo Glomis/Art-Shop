@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,7 +32,7 @@
                     <gestureRecognizers/>
                     <blurEffect style="light"/>
                     <connections>
-                        <outletCollection property="gestureRecognizers" destination="UZz-m5-gzT" appends="YES" id="MS6-vn-HbN"/>
+                        <outletCollection property="gestureRecognizers" destination="S3o-FG-XOC" appends="YES" id="P1I-Yd-r71"/>
                     </connections>
                 </visualEffectView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xYe-r7-saN" customClass="roundedView" customModule="Art_Shop" customModuleProvider="target">
@@ -117,9 +117,9 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="140.57971014492756" y="129.91071428571428"/>
         </view>
-        <tapGestureRecognizer id="UZz-m5-gzT">
+        <tapGestureRecognizer id="S3o-FG-XOC">
             <connections>
-                <action selector="tapAnyWay:" destination="-1" id="DZQ-TK-ZlN"/>
+                <action selector="tap:" destination="-1" id="qqj-zh-A6v"/>
             </connections>
         </tapGestureRecognizer>
     </objects>

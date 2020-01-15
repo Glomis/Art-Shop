@@ -10,7 +10,7 @@ import UIKit
 import FirebaseFirestore
 
 class ProductsVC: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     var products = [Product]()
@@ -21,59 +21,103 @@ class ProductsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetchCollection()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: Identifiers.ProductCell, bundle: nil), forCellReuseIdentifier: Identifiers.ProductCell)
+        tableView.register(UINib(nibName: "ProductCell", bundle: nil), forCellReuseIdentifier: "ProductCell")
+        
+        fetchCollection()
     }
     
     
     func fetchCollection() {
-        let collectionRef = Firestore.firestore().collection("Products")
-        
-        listener = collectionRef.whereField("category", isEqualTo: category.id).addSnapshotListener { (snap, error) in
-            guard let documents = snap?.documents else { return }
+        listener = Firestore.firestore().collection("Products").whereField("category", isEqualTo: category.id).order(by: "timeStamp", descending: true).addSnapshotListener { (snap, error) in
             
-            self.products.removeAll()
-            for document in documents {
-                let data = document.data()
-                let newProduct = Product.init(data: data)
-                self.products.append(newProduct)
+            if let error = error {
+                debugPrint(error, "ВСЁ ПРОПАААААЛО!!!")
             }
-            self.tableView.reloadData()
+            
+            snap?.documentChanges.forEach({ (change) in
+                
+                let data = change.document.data()
+                let product = Product.init(data: data)
+                
+                switch change.type {
+                    
+                case .added:
+                    self.docimentAdded(change: change, product: product)
+                case .modified:
+                    self.documentModifiried(change: change, product: product)
+                case .removed:
+                    self.documentRemoved(change: change)
+                }
+            })
         }
     }
-
+    
+    func docimentAdded(change: DocumentChange, product: Product) {
+        
+        let newIndex = Int(change.newIndex)
+        
+        products.insert(product, at: newIndex)
+        tableView.insertRows(at: [IndexPath(row: newIndex, section: 0)], with: .automatic)
+    }
+    
+    func documentModifiried(change: DocumentChange, product: Product) {
+        
+        if change.newIndex == change.oldIndex {
+            let index = Int(change.newIndex)
+            products[index] = product
+            tableView.reloadRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
+        } else {
+            let newIndex = Int(change.newIndex)
+            let oldIndex = Int(change.oldIndex)
+            products.remove(at: oldIndex)
+            products.insert(product, at: newIndex)
+            tableView.moveRow(at: IndexPath(row: oldIndex, section: 0), to: IndexPath(row: newIndex, section: 0))
+        }
+    }
+    
+    func documentRemoved(change: DocumentChange) {
+        
+        let oldIndex = Int(change.oldIndex)
+        
+        products.remove(at: oldIndex)
+        tableView.deleteRows(at: [IndexPath(row: oldIndex, section: 0)], with: .automatic)
+    }
 }
 
+
+
+
+//MARK: Table View Delegate
+
 extension ProductsVC: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        products.count
+        
+         return products.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        if let cell = tableView.dequeueReusableCell(withIdentifier: Identifiers.ProductCell, for: indexPath) as? ProductCell {
-
+        
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCell", for: indexPath) as? ProductCell {
+            
             cell.configureCell(product: products[indexPath.row])
+            
             return cell
         }
         return UITableViewCell()
     }
     
-    
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = ProductDetailVC()
-        vc.modalTransitionStyle = .crossDissolve
-        vc.modalPresentationStyle = .overCurrentContext
-        
         let selectedProduct = products[indexPath.row]
         vc.product = selectedProduct
+        vc.modalPresentationStyle = .overCurrentContext
+        vc.modalTransitionStyle = .crossDissolve
         present(vc, animated: true, completion: nil)
     }
-        
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }

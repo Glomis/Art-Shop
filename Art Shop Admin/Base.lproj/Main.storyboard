@@ -87,6 +87,7 @@
                     <connections>
                         <outlet property="collectionView" destination="uxf-dG-R2x" id="gsm-nO-8B7"/>
                         <outlet property="loginBtn" destination="vQQ-Wb-2s0" id="VZl-7b-Haw"/>
+                        <segue destination="9x7-ra-GLz" kind="show" identifier="toProductsVC" id="dU4-Mb-TSq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4U-p0-XBc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -196,6 +197,45 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1847.826086956522" y="114.50892857142857"/>
+        </scene>
+        <!--Admin ProductsVC-->
+        <scene sceneID="IhT-Zl-xTT">
+            <objects>
+                <viewController id="9x7-ra-GLz" customClass="AdminProductsVC" customModule="Art_Shop_Admin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hui-pr-94N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_cat3" translatesAutoresizingMaskIntoConstraints="NO" id="pL8-hg-JNi">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Ne-mz-ITn">
+                                <rect key="frame" x="2" y="88" width="410" height="808"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="pL8-hg-JNi" firstAttribute="top" secondItem="31b-yV-4EI" secondAttribute="top" id="DqW-gq-EX7"/>
+                            <constraint firstItem="31b-yV-4EI" firstAttribute="trailing" secondItem="pL8-hg-JNi" secondAttribute="trailing" id="L5r-Q7-a4u"/>
+                            <constraint firstItem="5Ne-mz-ITn" firstAttribute="top" secondItem="31b-yV-4EI" secondAttribute="top" id="nH1-8D-d0L"/>
+                            <constraint firstItem="5Ne-mz-ITn" firstAttribute="leading" secondItem="31b-yV-4EI" secondAttribute="leading" constant="2" id="oSL-2c-GMM"/>
+                            <constraint firstItem="31b-yV-4EI" firstAttribute="trailing" secondItem="5Ne-mz-ITn" secondAttribute="trailing" constant="2" id="uJH-Mv-AOf"/>
+                            <constraint firstItem="pL8-hg-JNi" firstAttribute="leading" secondItem="hui-pr-94N" secondAttribute="leading" id="wqi-dN-JsO"/>
+                            <constraint firstAttribute="bottom" secondItem="pL8-hg-JNi" secondAttribute="bottom" id="xNE-ah-rcQ"/>
+                            <constraint firstAttribute="bottom" secondItem="5Ne-mz-ITn" secondAttribute="bottom" id="xQE-4A-Wqf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="31b-yV-4EI"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1Yo-Na-98c"/>
+                    <connections>
+                        <outlet property="tableView" destination="5Ne-mz-ITn" id="YYJ-GN-3n3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cCF-o1-HxP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1009" y="874"/>
         </scene>
     </scenes>
     <resources>

@@ -22,16 +22,9 @@ class ProductCell: UITableViewCell {
         
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        
-    }
-    
+   
     func configureCell(product: Product) {
         productTitle.text = product.name
-        productPrice.text = String(product.price)
-        
         
         if let url = URL(string: product.imgUrl) {
             productImg.kf.setImage(with: url)
