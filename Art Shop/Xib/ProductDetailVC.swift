@@ -35,10 +35,16 @@ class ProductDetailVC: UIViewController {
     
     func showCurrentProduct() {
         productName.text = product.name
-       // productPrice.text = String(product.price)
+        
         productDescription.text = product.productDiscription
         if let url = URL(string: product.imgUrl) {
             productImg.kf.setImage(with: url)
+        }
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        if let price = formatter.string(from: product.price as NSNumber) {
+            productPrice.text = price
         }
     }
     

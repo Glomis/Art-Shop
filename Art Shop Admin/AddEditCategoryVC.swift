@@ -14,12 +14,28 @@ class AddEditCategoryVC: UIViewController {
     
     @IBOutlet weak var categoryNameTF: UITextField!
     @IBOutlet weak var categoryImg: roundedImageView!
+    @IBOutlet weak var addBtn: UIButton!
+    
+    var categoryToEdit: Category?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
+        if categoryToEdit == nil {
+            print("Oh My Shit")
+        }
         categoryNameTF.delegate = self
+        
+        if let category = categoryToEdit {
+            addBtn.setTitle("Save Changes", for: .normal)
+            categoryNameTF.text = category.name
+        
+            if let url = URL(string: category.imgUrl) {
+                categoryImg.contentMode = .scaleAspectFill
+                categoryImg.kf.setImage(with: url)
+            }
+        }
     }
     
     
@@ -38,11 +54,13 @@ class AddEditCategoryVC: UIViewController {
         metaData.contentType = "image/jpg"
         
         imageRef.putData(imageData, metadata: metaData) { (metaData, error) in
+             
             if let error = error {
                 debugPrint("Что-то не так")
                 self.handleFireAuthError(error: error)
                 return
             }
+    
             imageRef.downloadURL { (url, error) in
                 if let error = error {
                     debugPrint("Или тут что-то не так")
@@ -62,8 +80,15 @@ class AddEditCategoryVC: UIViewController {
                                      imgUrl: url,
                                      timeStamp: Timestamp())
         
-        docRef = Firestore.firestore().collection("categories").document()
-        category.id = docRef.documentID
+        if let categoryToEdit = categoryToEdit {
+            // Редактируем существующую Категорию
+            docRef = Firestore.firestore().collection("categories").document(categoryToEdit.id)
+            category.id = categoryToEdit.id
+        } else {
+            // Создаем новую Катеорию
+            docRef = Firestore.firestore().collection("categories").document()
+            category.id = docRef.documentID
+        }
         
         let data = Category.categoryToModel(category: category)
         docRef.setData(data, merge: true) { (error) in
@@ -80,7 +105,7 @@ class AddEditCategoryVC: UIViewController {
     
     
     
-    @IBAction func imageTaped(_ sender: Any) {
+    @IBAction func imageTaped(_ sender: UITapGestureRecognizer) {
         lounchImgPicker()
     }
     

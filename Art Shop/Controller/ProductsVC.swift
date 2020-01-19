@@ -11,8 +11,10 @@ import FirebaseFirestore
 
 class ProductsVC: UIViewController {
     
+    // Outlets
     @IBOutlet weak var tableView: UITableView!
     
+    // Variables
     var products = [Product]()
     var category: Category!
     var listener: ListenerRegistration!
@@ -20,7 +22,7 @@ class ProductsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "ProductCell", bundle: nil), forCellReuseIdentifier: "ProductCell")

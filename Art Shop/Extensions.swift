@@ -33,4 +33,9 @@ struct Identifiers {
     static let ProductCell = "ProductCell"
 }
 
+struct Ways {
+   static let segueToAddEditProduct = "toAddEditProduct"
+   static let segueToAddEditCategory = "toEditCategory"
+}
+
 

@@ -29,6 +29,11 @@ class ProductCell: UITableViewCell {
         if let url = URL(string: product.imgUrl) {
             productImg.kf.setImage(with: url)
         }
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        if let price = formatter.string(from: product.price as NSNumber) {
+            productPrice.text = price
+        }
     }
     
     @IBAction func addToCartClicked(_ sender: Any) {
